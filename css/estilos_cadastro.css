@@ -1,0 +1,59 @@
+.conteudo {
+    background-image: url("../imagens/back.png");
+    background-size: cover;
+    background-position-y: center;
+    display: grid;
+    grid-template-areas: 'texto texto texto bloco';
+}
+
+.vazio {
+    width: 100%;
+    grid-area: texto;
+    /*Gambiarra para jogar o bloco de cadastro para a direita*/
+}
+
+.bloco_cadastro {
+    background-color: #fff;
+    width: 30vw;
+    padding: 1vw;
+    border-radius: 1vw;
+    margin-top: 2vw;
+    grid-area: bloco;
+}
+
+.cad_forms {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+#cads {
+    margin-top: 1vw;
+    padding: 0.5vw;
+    width: 20vw;
+    border: none;
+    border-radius: 1vw;
+    background-color: rgb(150, 3, 3);
+    color: #fff;
+    font-size: 2rem;
+}
+
+@media(max-width:900px) {
+    .vazio {
+        display: none;
+    }
+    .conteudo {
+        background-image: url("../imagens/back_mobile.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bloco_cadastro {
+        margin-top: 8vw;
+        width: 90vw;
+    }
+    #cads {
+        width: 80%;
+        margin: 5vw auto;
+    }
+}
